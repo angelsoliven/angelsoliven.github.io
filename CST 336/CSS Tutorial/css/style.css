@@ -1,0 +1,26 @@
+#container {
+    background-color: darkblue;
+    width: 100%;
+    color: white;
+}
+
+#mid-section {
+    width: 80%;
+    margin: auto;
+}
+
+#main-title {
+    /* color: blue; */
+    text-decoration: underline;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+}

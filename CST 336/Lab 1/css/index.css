@@ -1,0 +1,16 @@
+#container {
+    background-color: lightblue;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    ;
+}
+
+.pfp-images {
+    width: 150px;
+}
