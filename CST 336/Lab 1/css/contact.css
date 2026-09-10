@@ -1,4 +1,4 @@
-#full-page {
+.full-page {
     background-color: #FDE311;
     height: 100%;
     width: 100%;
@@ -43,44 +43,21 @@
     color: white;
 }
 
-.secondary-back {
+.content-dark-bg {
     background-color: #212529;
 }
 
-#cards {
-    height: 10%;
-    justify-content: space-evenly;
+.content-light-bg {
+    background-color: #FDE311;
 }
 
-.column {
-    justify-content: center;
-}
-
-.pfp-images {
-    width: 200px;
-    height: 200px;
-}
-
-#mission-statement {
-    height: 10%;
-}
-
-#mission-body {
-    height: 23%;
-}
-
-#body-message {
-    height: 100%;
-    width: 60%;
-}
-
-#header-message {
-    font-size: 90px;
-    color: white;
+#contact-form {
+    height: 75%;
+    width: 100%;
 }
 
 .footer-back {
-    background-color: #FDE311;
+    background-color: #212529;
 }
 
 #credits-footer {
@@ -93,7 +70,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 24%;
+    height: 12%;
 }
 
 #csumb-logo {
