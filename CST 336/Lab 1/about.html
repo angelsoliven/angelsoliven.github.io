@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="full-page" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,53 +7,97 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?">
     <link rel="stylesheet" href="css/about.css">
     <title> Project 1 </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Faster+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-        <h1 id="title"> THE JUSTICE LEAGUE </h1>
-    </header>
+<body class="full-page">
+    <div id="head-container">
+        <div id="header-content" class="centering">
+            <h1 id="main-header" class="header-text"> THE JUSTICE LEAGUE </h1>
+        </div>
 
-    <nav>
-        <a href = "home.html"> Home </a>
-        <a href = "about.html"> About </a>
-        <a href = "contact.html"> Contact </a>
-    </nav>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse centering" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link primary-headings" aria-current="page" href="index.html"> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active primary-headings" href="about.html"> About </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link primary-headings" href="contact.html"> Contact </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-    <br>
+    <div class="centering content-light-bg">
+        <table id="table">
+            <tr>
+                <th class="primary-headings"> Programming Language </th>
+                <th class="primary-headings"> Years Experience </th>
+            </tr>
 
-    <table>
-        <tr>
-            <th> Programming Language </th>
-            <th> Years Experience </th>
-        </tr>
+            <tr>
+                <td class="secondary-text"> C++ </td>
+                <td class="secondary-text"> 5 </td>
+            </tr>
 
-        <tr>
-            <td> C++ </td>
-            <td> 5 </td>
-        </tr>
+            <tr>
+                <td class="secondary-text"> JavaScript </td>
+                <td class="secondary-text"> 3 </td>
+            </tr>
+        </table>
+    </div>
 
-        <tr>
-            <td> JavaScript </td>
-            <td> 3 </td>
-        </tr>
-    </table>
+    <div id="hobbies" class="centering content-dark-bg">
+        <header id="hobbies-header" class="primary-headings dark-bg"><b> Our Common Hobbies </b></header>
+    </div>
 
-    <br>
+    <div id="hobbies-list" class="centering content-dark-bg">
+        <ul id="hobbies-content">
+            <li class="secondary-text dark-bg"> Video Games: Online shooting games are a favorite pastime of ours.</li>
+            <li class="secondary-text dark-bg"> Superheroes: DC and Marvel content. Some of our favorites include Batman and Superman.</li>
+            <li class="secondary-text dark-bg"> Listening to Music: R&B music is a top genre of ours. However, we also listen to Mexican and Rock.</li>
+            <li class="secondary-text dark-bg"> Coding: Learning new lanaguages and keeping our skills fresh. </li>
+            <li class="secondary-text dark-bg"> Touching Grass: Yes. We actually like seeing the light of day and breathing in fresh air. </li>
+        </ul>
+        </ul>
+        </ul>
+    </div>
 
-    <p> <b> Our Common Hobbies: </b> </p>
-
-    <ul>
-        <li> Video Games: We all like to play online shooting games. </li>
-        <li> Superheroes: We all like DC and Marvel content. </li>
-        <li> Music: R&B music is a top genre of ours. </li>
-    </ul>
-
-    <br>
-
-    <footer>
-        <p> CST336 Internet Programming. 2026 Soliven, Gonzalez, Silva </p>
-        <br> <img src = "https://csumb.edu/media/csumb/legacy/legacy-site-images/section-editors/university-communications/updated-branding/Logo_Primary-Full-color.jpg" width = 250 alt = "CSUMB Logo" />
+    <footer id="credits-footer" class="footer-back secondary-text">
+        <div id="credits-content">
+            <img id="csumb-logo"
+                src="https://csumb.edu/media/csumb/legacy/legacy-site-images/section-editors/university-communications/updated-branding/Logo_Primary-Full-color.jpg"
+                alt="CSUMB Logo" />
+            CST336 Internet Programming. 2026 Soliven, Gonzalez, Silva
+        </div>
     </footer>
 </body>
+
 </html>

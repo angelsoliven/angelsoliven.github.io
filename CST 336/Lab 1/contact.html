@@ -1,32 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="full-page" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?">
+    <link rel="stylesheet" href="css/contact.css">
     <title> Project 1 </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Faster+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <h1> THE JUSTICE LEAGUE </h1>
-    </header>
 
-    <nav>
-        <a href = "home.html"> Home </a>
-        <a href = "about.html"> About </a>
-        <a href = "contact.html"> Contact </a>
-    </nav>
+<body class="full-page">
+    <div id="head-container">
+        <div id="header-content" class="centering">
+            <h1 id="main-header" class="header-text"> THE JUSTICE LEAGUE </h1>
+        </div>
 
-    <br>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse centering" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link primary-headings" aria-current="page" href="index.html"> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link primary-headings" href="about.html"> About </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active primary-headings" href="contact.html"> Contact </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-    <main>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTyEuXVuxNbhYQWilzjexeJ8veQ9rwG_zH-ZzRPaz_b2YkVw/viewform?embedded=true" width="640" height="382" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </main>
 
-    <br>
+    <iframe id="contact-form" class="centering"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScTyEuXVuxNbhYQWilzjexeJ8veQ9rwG_zH-ZzRPaz_b2YkVw/viewform?embedded=true"
+        width="640" height="382" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-    <footer>
-        <p> CST336 Internet Programming. 2026 Soliven, Gonzalez, Silva </p>
-        <img src = "https://csumb.edu/media/csumb/legacy/legacy-site-images/section-editors/university-communications/updated-branding/Logo_Primary-Full-color.jpg" width = 250 alt = "CSUMB Logo"/>
+
+    <footer id="credits-footer" class="footer-back secondary-text">
+        <div id="credits-content" class="dark-bg">
+            <img id="csumb-logo"
+                src="https://csumb.edu/media/csumb/legacy/legacy-site-images/section-editors/university-communications/updated-branding/Logo_Primary-Full-color.jpg"
+                alt="CSUMB Logo" />
+            CST336 Internet Programming. 2026 Soliven, Gonzalez, Silva
+        </div>
     </footer>
 </body>
+
 </html>
