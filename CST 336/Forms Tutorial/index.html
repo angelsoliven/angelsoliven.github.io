@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Basic Input -->
+    <label for="basic-input"> Animal Noise </label>
+    <input id="basic-input" type="text">
+
+    <br>
+
+    <!-- Numeric Input -->
+    <label for="age-input"> Age </label>
+    <input id="age-input" type="number" max="10">
+
+    <br>
+
+    <!-- Dropdown List -->
+    <label for="car-model-input"> Car Model </label>
+    <select id="car-model-input">
+        <!-- Each entry gets option tag -->
+        <!-- Good practice to specify id and value b/c they may be different -->
+        <option id="camry" value="Camry"> Camry </option>
+        <option id="corolla" value="Corolla"> Corolla </option>
+        <option id="civic" value="Civic"> Civic </option>
+        <option id="lamborgini" value="Lamborgini"> Lamborgini </option>
+    </select>
+
+    <label for="states"> States </label>
+    <select id="states">
+        <option id="california" value="CA"> California </option>
+        <option id="Texas" value="TX"> Texas </option>
+    </select>
+
+    <br>
+
+    <!-- Checkbox -->
+    <label> Ingredients </label>
+    <!-- One input element for each checkbox. Each needs value, type, and id -->
+    <input id="lettuce" type="checkbox" value="lettuce" name="ingredients"> <label for="lettuce"> Lettuce </label>
+    <input id="tomato" type="checkbox" value="tomato" name="ingredients"> <label for="tomato"> Tomato </label>
+    <input id="onion" type="checkbox" value="onion" name="ingredients"> <label for="onion"> Onion </label>
+
+    <br>
+
+    <!-- Radio Button List  -->
+    <!-- Same for checkbox but needs to be grouped by name -->
+    <label> True or False </label>
+    <input id="true" type="radio" value="T" name="truth"> <label for="true"> True </label>
+    <input id="false" type="radio" value="F" name="truth"> <label for="false"> False </label>
+
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/arrays.js" defer></script>
+</body>
+</html>
