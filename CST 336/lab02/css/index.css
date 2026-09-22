@@ -1,0 +1,111 @@
+.full-body {
+    height: 100%;
+    width: 100%;
+    background-color: #037e37;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#header-text {
+    color: #332d2d;
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 75px;
+}
+
+#instructions {
+    background-color: #05ba12;
+}
+
+#guess-message {
+    color: #ececec;
+    font-family: "Wellfleet", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#input-section {
+    height: 13%;
+    width: 100%;
+    background-color: #05ba12;
+}
+
+#inputBox {
+    height: 73%;
+    width: 10%;
+    text-align: center;
+}
+
+#logSection {
+    height: 8%;
+    width: 100%;
+    background-color: #05ba12;
+}
+
+#currentGuesses {
+    color: #ececec;
+    font-family: "Wellfleet", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#buttonSection {
+    height: 10%;
+    width: 100%;
+}
+
+#guess-section {
+    height: 40%;
+    width: 50%;
+}
+
+.button {
+    color: #332d2d;
+    background-color: #70f01f;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#reset-section {
+    height: 40%;
+    width: 50%;
+}
+
+#stateSection {
+    height: 40%;
+    width: 100%;
+}
+
+#winSection {
+    height: 40%;
+    width: 50%;
+    background-color: #05ba12;
+}
+
+#winCount {
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+
+#lossSection {
+    height: 40%;
+    width: 50%;
+    background-color: #05ba12;
+}
+
+#lossCount {
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}

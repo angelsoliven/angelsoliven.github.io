@@ -1,20 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="full-body">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="JavaScript/index.js" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Original+Surfer&family=Wellfleet&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <header id="header-title"><h1> Guess the Number </h1></header>
-    <p id="guessMessage"> Guess the number I am thinking of in the box! Input numbers [0, 99]. </p>
-    <input type="number" id="inputBox">
-    <button id="guessButton"> Guess! </button>
-    <button id="resetButton"> Reset! </button>
-    <p id="currentGuesses"> Guess Log: </p>
-    <p id="winCount"></p>
-    <p id="lossCount"></p>
+
+<body class="full-body">
+    <header id="header-title" class="center">
+        <h1 id="header-text"> Guess the Number! </h1>
+    </header>
+
+    <div id="instructions" class="center">
+        <p id="guess-message"> Guess the number I am thinking of in the box! Input numbers [0, 99]. </p>
+    </div>
+
+    <div id="input-section" class="center">
+        <input type="number" id="inputBox">
+    </div>
+
+    <div id="logSection" class="center">
+        <p id="currentGuesses"> Guess Log: </p>
+    </div>
+
+    <div id="buttonSection" class="center">
+        <div id="guess-section" class="center">
+            <button id="guessButton" class="button"> Guess! </button>
+        </div>
+
+        <div id="reset-section" class="center">
+            <button id="resetButton" class="button"> Reset! </button>
+        </div>
+    </div>
+
+    <div id="stateSection" class="center">
+        <div id="winSection" class="center">
+            <p id="winCount"></p>
+        </div>
+
+        <div id="lossSection" class="center">
+            <p id="lossCount"></p>
+        </div>
+    </div>
 </body>
+
 </html>
