@@ -2,7 +2,7 @@ let answer;
 let triesLeft;
 let totalWins = 0;
 let totalLosses = 0;
-let guessMessage = document.querySelector("#guessMessage");
+let guessMessage = document.querySelector("#guess-message");
 let guessButton = document.querySelector("#guessButton");
 let resetButton = document.querySelector("#resetButton");
 let inputBox = document.querySelector("#inputBox");
@@ -13,7 +13,7 @@ let lossCount = document.querySelector("#lossCount");
 function reset() {
     triesLeft = 7;
     answer = Math.floor(Math.random() * 100);
-    guessMessage.style.color = "black";
+    guessMessage.style.color = "#ececec";
     guessMessage.textContent = "Guess the number I am thinking of in the box! Input numbers [0, 99].";
     currentGuesses.textContent = "Guess Log: ";
     resetButton.style.display = "none";
@@ -53,7 +53,7 @@ winCount.textContent = "Wins: " + totalWins;
 lossCount.textContent = "Losses: " +  totalLosses;
 
 guessButton.addEventListener('click', function () {
-    if (+inputBox.value > 99) {
+    if (+inputBox.value < 0 || +inputBox.value > 99) {
         guessMessage.style.color = "red";
         guessMessage.textContent = "Error: number not within range.";
     } else if (+inputBox.value == answer) {
