@@ -1,0 +1,53 @@
+#filter-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#zeldaInfo {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-medium-green {
+    background-color: #0d9263;
+}
+
+.txt-dark-gray {
+    color: #494b4b;
+}
+
+.txt-gold {
+    color: #d4ce46;
+}
+
+.bg-light-green {
+    background-color: #4aba91;
+}
+
+.bg-gold {
+    background-color: #d4ce46;
+}
+
+.bg-dark-green {
+    background-color: #0e5135;
+}
+
+.results {
+    text-align: center;
+    height: 25%;
+    width: 25%;
+}
+
+#instruct-text {
+    text-align: center;
+}
+
+#zeldaInfo {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    background-color: #0e5135;
+}
