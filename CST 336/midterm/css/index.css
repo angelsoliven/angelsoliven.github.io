@@ -1,0 +1,49 @@
+#entire {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.header-text {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.primary-text {
+    font-family: "Mozilla Headline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.bg-light-blue {
+    background-color: #00c3e3;
+}
+
+.bg-pastel-red {
+    background-color: #ff4554;
+}
+
+.bg-red {
+    background-color: #e60012;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-light-gray {
+    color: #989898;
+}
+
+.txt-dark-gray {
+    color: #414548;
+}

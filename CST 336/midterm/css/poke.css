@@ -1,0 +1,52 @@
+.bg-lighter-red {
+    background-color: #ee1515;
+}
+
+.bg-darker-red {
+    background-color: #f00000;
+}
+
+.bg-black {
+    background-color: #222224;
+}
+
+.txt-light {
+    color: #f0f0f0;
+}
+
+.txt-dark {
+    color: #222224;
+}
+
+.bg-dark {
+    background-color: #222224;
+    color: #f0f0f0;
+}
+
+.bg-white {
+    background-color: #f0f0f0;
+}
+
+#main-section {
+    height: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+#pokeInfo {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+#filter-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.results {
+    text-align: center;
+    height: 15%;
+    width: 10%;
+}
