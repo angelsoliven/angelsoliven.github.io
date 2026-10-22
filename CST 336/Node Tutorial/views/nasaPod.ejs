@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA POD</title>
+
+    <%-include('partials/includes.ejs')%>
+    <%-include('partials/style.ejs')%>
+</head>
+<body>
+    <header> <h1 id="header-title" class="header-text text-center text-color darkest-blue-bg"> NASA POD </h1> </header>
+
+    <%-include('partials/nav.ejs')%>
+
+    <main id="main-section" class="img-display mid-blue-bg">
+        <div> <img class="planet-dimensions" src="<%=result.url%>" /> </div>
+        <div class="info-section-1"> 
+            <div id="planet-description"> <p class="text-color primary-text"> <%=result.explanation%> </p> </div>
+        </div>
+    </main>
+
+    <%-include('partials/footer.ejs')%>
+</body>
+</html>

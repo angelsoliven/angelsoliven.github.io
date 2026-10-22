@@ -1,0 +1,80 @@
+.text-center {
+    text-align: center;
+}
+
+.darkest-blue-bg {
+    background-color: #062B43;
+}
+
+.dark-blue-bg {
+    background-color: #044568;
+}
+
+.text-color {
+    color: #CDD7DF;
+}
+
+.header-text {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.primary-text {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.img-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.mid-blue-bg {
+    background-color: #5692A9;
+}
+
+.light-blue-bg {
+    background-color: #9DCDDC;
+}
+
+.img-dimensions {
+    height: 25%;
+    width: 25%;
+}
+
+#header-title {
+    height: 15%;
+    width: 100%;
+}
+
+.quarter-page {
+    height: 25%;
+    width: 100%;
+}
+
+#main-section {
+    height: 50%;
+    width: 100%;
+}
+
+.info-section-1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#planet-description {
+    width: 40%;
+}
+
+.planet-dimensions {
+    height: 100%;
+    width: 100%;
+}
+
+#footer-section {
+    height: 10%;
+    width: 100%;
+}

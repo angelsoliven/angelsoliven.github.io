@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Planets website </title>
+    <title> Home </title>
+
+    <%-include('partials/includes.ejs')%>
+    <%-include('partials/style.ejs')%>
 </head>
+
 <body>
-    <p>Welcome to the Galaxy</p>
-    <a href="/planetInfo?planet=Jupiter">Jupiter</a>
-    <a href="/planetInfo?planet=Mars">Mars</a>
-    <a href="/planetInfo?planet=Mercury">Mercury</a>
-    <a href="/planetInfo?planet=Venus">Venus</a>
-    <a href="/planetInfo?planet=Earth">Earth</a>
-    <a href="/planetInfo?planet=Saturn">Saturn</a>
-    <a href="/planetInfo?planet=Uranus">Uranus</a>
-    <a href="/planetInfo?planet=Neptune">Neptune</a>
-    <a href="/planetInfo?planet=Pluto">Pluto</a>
+    <header> <h1 id="header-title" class="header-text text-center text-color darkest-blue-bg">Welcome to the Galaxy</h1> </header>
+
+    <%-include('partials/nav.ejs')%>
+
+    <% if (working === true) { %>
+        <main id="main-section">
+            <div class="img-display mid-blue-bg">
+                <% for (let image of result) { %>
+                    <div class="light-blue-bg">
+                        <img class="img-dimenstions" src="<%=image.previewURL%>" />
+                    </div>
+                <% } %>
+            </div>
+        </main>
+    <% } else { %>
+        <p class="primary-text text-color"> <%=msg%> </p>
+    <% } %>
+
+    <%-include('partials/footer.ejs')%>
 </body>
+
 </html>
