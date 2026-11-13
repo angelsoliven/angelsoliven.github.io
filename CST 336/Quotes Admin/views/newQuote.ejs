@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Quote</title>
+</head>
+
+<body>
+    <h1>New Quote</h1>
+    <!-- Where you type in the quote -->
+    <form action="/insertQuote" method="post">
+        <label for="quoteInput">Quote</label>
+        <input type="text" name="quote" id="quoteInput">
+        
+        <!-- Checks if there is a formErrors object 
+             and if it has an entry for the user field  -->
+        <% if (formErrors.quote) { %>
+            <span class="form-error"><%= formErrors.quote %></span> 
+        <% } %>
+
+        <br>
+
+        <label for="firstNameInput"> First Name </label>
+        <input type="text" name="firstName" id="firstNameInput" />
+
+        <br>
+
+        <label for="lastNameInput"> Last Name </label>
+        <input type="text" name="lastName" id="lastNameInput" />
+
+        <br>
+
+        <label for="categoryInput"> Category </label>
+        <input type="text" name="category" id="categoryInput" />
+
+        <br>
+
+        <label for="likesInput"> Likes </label>
+        <input type="number" name="likes" id="likesInput" />
+
+        <button>Create</button>
+    </form>
+</body>
+
+</html>

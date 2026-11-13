@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author List</title>
+</head>
+<body>
+    <h1>Authors</h1>
+    <% for (let author of authors)  { %>
+        <div>
+            <a href="/editAuthor?authorId=<%= author.authorId %>">Update</a>
+            <%= author.firstName %> <%= author.lastName %>
+        </div>
+    <% } %>
+</body>
+</html>
