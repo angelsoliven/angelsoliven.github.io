@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('partials/includes.ejs')%>
     <title>Quote List</title>
 </head>
 <body>
     <h1>Quotes</h1>
+    <%-include('partials/nav.ejs')%>
     <% for (let quote of quotes)  { %>
         <div>
             <!-- Creates a link to the editQuote route -->

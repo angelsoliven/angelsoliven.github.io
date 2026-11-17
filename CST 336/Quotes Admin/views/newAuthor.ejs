@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('partials/includes.ejs')%>
     <title>New Author</title>
 </head>
 <body>
     <h1>New Author</h1>
+    <%-include('partials/nav.ejs')%>
     <form action="/insertAuthor" method="post">
+        <!-- Checks if there is a formErrors object 
+             and if it has an entry for the user field  -->
+        <% if (formErrors.length > 0) { %>
+            <% for (let err of formErrors) { %>
+                <span class="form-error"><%=err%></span> 
+                <br>
+            <%}%>
+        <% } %>
+        
         <label for="firstNameInput"> First Name </label>
         <input type="text" name="firstName" id="firstNameInput" />
 

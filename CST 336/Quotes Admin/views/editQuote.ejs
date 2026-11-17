@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%-include('partials/includes.ejs')%>
+    <title>Edit Quote</title>
 </head>
 
 <body>
     <h1>Edit quote</h1>
+    <%-include('partials/nav.ejs')%>
     <!-- Where you type in the quote -->
     <form action="/updateQuote" method="post">
 
@@ -16,15 +18,22 @@
              we can submit this when we click update -->
         <input type="hidden" name="quoteId" value="<%= formObject.quoteId %>">
 
+        <!-- Checks if there is a formErrors object 
+             and if it has an entry for the user field  -->
+        <% if (formErrors.length > 0) { %>
+            <% for (let err of formErrors) { %>
+                <span class="form-error"><%=err%></span> 
+                <br>
+            <%}%>
+        <% } %>
+
+        <br>
+
         <label for="quoteInput">Quote</label>
         <!-- The "value" being set fills in the text box with the current quote -->
         <input type="text" name="quote" id="quoteInput" value="<%= formObject.quote %>">
-        
-        <!-- Checks if there is a formErrors object 
-             and if it has an entry for the user field  -->
-        <% if (formErrors.quote) { %>
-            <span class="form-error"><%= formErrors.quote %></span> 
-        <% } %>
+
+        <br>
 
         <label for="authorInput">Author</label>
         <!-- The if statement is to make sure the correct author is selected by default -->
@@ -38,6 +47,8 @@
             <% } %>
         </select>
 
+        <br>
+
         <label for="categoryInput">Categories</label>
         <select type="text" name="category" id="categoryInput">
             <% for (let category of formData.categories) { %>
@@ -49,8 +60,12 @@
             <% } %>
         </select>
 
+        <br>
+
         <label for="likesInput">Likes</label>
         <input type="number" name="likes" id="likesInput" value="<%=formObject.likes %>">
+
+        <br>
 
         <button>Update</button>
     </form>
