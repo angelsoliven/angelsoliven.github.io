@@ -20,15 +20,27 @@ const pool = mysql.createPool({
     waitForConnections: true
 });
 
-
-
 //routes
 app.get('/', (req, res) => {
-  res.render('login.ejs');
+  res.render('login.ejs', {error: {}});
 });
 
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
+    let username = req.body.username;
+    let password = req.body.password;
 
+    let checkQuery = 
+    `SELECT * FROM admin WHERE username = ?`;
+
+    let params = [username];
+    const [adminRows] = await pool.query(checkQuery, params);
+
+    if (adminRows.length > 0 && await bcrypt.compare(password, adminRows[0].password)) {
+        res.render('home.ejs');
+    } else {
+        let error = "Username or password is incorrect";
+        res.render('login.ejs', {error: error});
+    }
 })
 
 app.get('/newUser', (req, res) => {
