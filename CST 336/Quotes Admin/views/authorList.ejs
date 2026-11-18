@@ -6,14 +6,17 @@
     <%-include('partials/includes.ejs')%>
     <title>Author List</title>
 </head>
-<body>
-    <h1>Authors</h1>
+<body class="bg-night">
+    <header class="bg-jet center-div">
+        <h1 class="txt-white header-font">Authors</h1>
+    </header>
+
     <%-include('partials/nav.ejs')%>
+
     <% for (let author of authors)  { %>
-        <div>
-            <a href="/editAuthor?authorId=<%= author.authorId %>">Update</a>
-            <%= author.firstName %> <%= author.lastName %>
-        </div>
+        <main>
+            <p class="txt-white primary-txt"><a class="primary-txt" href="/editAuthor?authorId=<%= author.authorId %>">Update</a> <%= author.firstName %> <%= author.lastName %></p>
+        </main>
     <% } %>
 </body>
 </html>

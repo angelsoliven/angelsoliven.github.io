@@ -6,17 +6,20 @@
     <%-include('partials/includes.ejs')%>
     <title>Quote List</title>
 </head>
-<body>
-    <h1>Quotes</h1>
+<body class="bg-night">
+    <header class="bg-jet center-div">
+        <h1 class="txt-white header-font">Quotes</h1>
+    </header>
+
     <%-include('partials/nav.ejs')%>
+
     <% for (let quote of quotes)  { %>
-        <div>
+        <main>
             <!-- Creates a link to the editQuote route -->
             <!-- narrowed down to the specific quote Id -->
             <!-- This route renders the edit form -->
-            <a href="/editQuote?quoteId=<%= quote.quoteId %>">Update</a>
-            <%= quote.quote %>
-        </div>
+            <p class="txt-white primary-txt"> <a class="primary-txt" href="/editQuote?quoteId=<%= quote.quoteId %>">Update</a> <%= quote.quote %> </p>
+        </main>
     <% } %>
 </body>
 </html>

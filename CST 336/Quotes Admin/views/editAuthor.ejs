@@ -6,69 +6,78 @@
     <%-include('partials/includes.ejs')%>
     <title>Edit Author</title>
 </head>
-<body>
-    <h1>Edit author</h1>
+<body class="bg-night">
+    <header class="bg-jet center-div">
+        <h1 class="txt-white header-font">Edit Author</h1>
+    </header>
+
     <%-include('partials/nav.ejs')%>
 
-    <form action="/updateAuthor" method="post">
-
-        <!-- This keeps track of the authorId we're editing so
+    <form class="center-div" action="/updateAuthor" method="post">
+        <div>
+            <!-- This keeps track of the authorId we're editing so
              we can submit this when we click update -->
-        <input type="hidden" name="authorId" value="<%= formObject.authorId %>">
+            <input type="hidden" name="authorId" value="<%= formObject.authorId %>">
 
-        <!-- Checks if there is a formErrors object 
-             and if it has an entry for the user field  -->
-        <% if (formErrors.length > 0) { %>
-            <% for (let err of formErrors) { %>
-                <span class="form-error"><%=err%></span> 
-                <br>
-            <%}%>
-        <% } %>
+            <!-- Checks if there is a formErrors object 
+                and if it has an entry for the user field  -->
+            <div>
+                <% if (formErrors.length > 0) { %>
+                    <% for (let err of formErrors) { %>
+                        <p class="txt-white primary-txt"> <span class="form-error"><%=err%></span> </p>
+                    <%}%>
+                <% } %>
+            </div>
 
-        <label for="firstNameInput">First Name</label>
-        <input type="text" name="authorFirst" id="firstNameInput" value="<%= formObject.firstName %>">
+            <div>
+                <label class="txt-white primary-txt" for="firstNameInput">First Name</label>
+                <input class="primary-txt" type="text" name="authorFirst" id="firstNameInput" value="<%= formObject.firstName %>">
+            </div>
 
-        <br>
+            <div>
+                <label class="txt-white primary-txt" for="lastNameInput">Last Name</label>
+                <input class="primary-txt" type="text" name="authorLast" id="lastNameInput" value="<%= formObject.lastName %>">
+            </div>
 
-        <label for="lastNameInput">Last Name</label>
-        <input type="text" name="authorLast" id="lastNameInput" value="<%= formObject.lastName %>">
+            <div>
+                <label class="txt-white primary-txt" for="dodInput">DOD</label>
+                <input class="primary-txt" type="date" name="dod" id="dodInput" value="<%= formObject.dod %>">
+            </div>
 
-        <br>
+            <div>
+                <label class="txt-white primary-txt" for="dobInput">DOB</label>
+                <input class="primary-txt" type="date" name="dob" id="dobInput" value="<%= formObject.dob %>">
+            </div>
 
-        <label for="dodInput">DOD</label>
-        <input type="date" name="dod" id="dodInput" value="<%= formObject.dod %>">
+            <div>
+                <label class="txt-white primary-txt" for="genderInput">Gender</label>
+                <input class="primary-txt" type="text" name="gender" id="genderInput" value="<%= formObject.gender %>">
+            </div>
 
-        <br>
+            <div>
+                <label class="txt-white primary-txt" for="professionInput">Profession</label>
+                <input class="primary-txt" type="text" name="profession" id="professionInput" value="<%= formObject.profession %>">
+            </div>
 
-        <label for="dobInput">DOB</label>
-        <input type="date" name="dob" id="dobInput" value="<%= formObject.dob %>">
+            <div>
+                <label class="txt-white primary-txt" for="countryInput">Country</label>
+                <input class="primary-txt" type="text" name="country" id="countryInput" value="<%= formObject.country %>">
+            </div>
 
-        <br>
+            <div>
+                <label class="txt-white primary-txt" for="portraitInput">Portrait</label>
+                <input class="primary-txt" type="text" name="portrait" id="portraitInput" value="<%= formObject.portrait %>">
+            </div>
 
-        <label for="genderInput">Gender</label>
-        <input type="text" name="gender" id="genderInput" value="<%= formObject.gender %>">
+            <div>
+                <label class="txt-white primary-txt" for="bioInput">Biography</label>
+                <input class="primary-txt" type="text" name="bio" id="bioInput" value="<%= formObject.biography %>">
+            </div>
 
-        <br>
-
-        <label for="professionInput">Profession</label>
-        <input type="text" name="profession" id="professionInput" value="<%= formObject.profession %>">
-
-        <br>
-
-        <label for="countryInput">Country</label>
-        <input type="text" name="country" id="countryInput" value="<%= formObject.country %>">
-
-        <br>
-
-        <label for="portraitInput">Portrait</label>
-        <input type="text" name="portrait" id="portraitInput" value="<%= formObject.portrait %>">
-
-        <br>
-
-        <label for="bioInput">Biography</label>
-        <input type="text" name="bio" id="bioInput" value="<%= formObject.biography %>">
-
-        <button>Update</button>
+            <div>
+                <button type="button" class="btn btn-primary primary-txt">Edit</button>
+            </div>
+        </div>
     </form>
 </body>
 </html>

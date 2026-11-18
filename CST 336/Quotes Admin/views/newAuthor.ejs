@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%-include('partials/includes.ejs')%>
-    <title>New Author</title>
+        <title>New Author</title>
 </head>
-<body>
-    <h1>New Author</h1>
+
+<body class="bg-night">
+    <header class="bg-jet center-div">
+        <h1 class="txt-white header-font">New Author</h1>
+    </header>
+
     <%-include('partials/nav.ejs')%>
-    <form action="/insertAuthor" method="post">
-        <!-- Checks if there is a formErrors object 
-             and if it has an entry for the user field  -->
-        <% if (formErrors.length > 0) { %>
-            <% for (let err of formErrors) { %>
-                <span class="form-error"><%=err%></span> 
-                <br>
-            <%}%>
-        <% } %>
-        
-        <label for="firstNameInput"> First Name </label>
-        <input type="text" name="firstName" id="firstNameInput" />
 
-        <br>
+        <form class="center-div" action="/insertAuthor" method="post">
+            <div>
+                <!-- Checks if there is a formErrors object 
+                and if it has an entry for the user field  -->
+                <div>
+                    <% if (formErrors.length> 0) { %>
+                        <% for (let err of formErrors) { %>
+                            <p class="txt-white primary-txt"> <span class="form-error"> <%=err%> </span> </p>
+                        <% } %>
+                    <% } %>
+                </div>
 
-        <label for="lastNameInput"> Last Name </label>
-        <input type="text" name="lastName" id="lastNameInput" />
+                <div>
+                    <label for="firstNameInput" class="txt-white primary-txt"> First Name </label>
+                    <input class="primary-txt" type="text" name="firstName" id="firstNameInput" />
+                </div>
 
-        <br>
+                <div>
+                    <label for="lastNameInput" class="txt-white primary-txt"> Last Name </label>
+                    <input class="primary-txt" type="text" name="lastName" id="lastNameInput" />
+                </div>
 
-        <label for="dodInput">DOD</label>
-        <input type="date" name="dod" id="dodInput">
+                <div>
+                    <label for="dodInput" class="txt-white primary-txt">DOD</label>
+                    <input class="primary-txt" type="date" name="dod" id="dodInput">
+                </div>
 
-        <br>
+                <div>
+                    <label for="dobInput" class="txt-white primary-txt">DOB</label>
+                    <input class="primary-txt" type="date" name="dob" id="dobInput">
+                </div>
 
-        <label for="dobInput">DOB</label>
-        <input type="date" name="dob" id="dobInput">
+                <div>
+                    <label for="genderInput" class="txt-white primary-txt">Gender</label>
+                    <input class="primary-txt" type="text" name="gender" id="genderInput">
+                </div>
 
-        <br>
+                <div>
+                    <label for="professionInput" class="txt-white primary-txt">Profession</label>
+                    <input class="primary-txt" type="text" name="profession" id="professionInput">
+                </div>
 
-        <label for="genderInput">Gender</label>
-        <input type="text" name="gender" id="genderInput">
+                <div>
+                    <label for="countryInput" class="txt-white primary-txt">Country</label>
+                    <input class="primary-txt" type="text" name="country" id="countryInput">
+                </div>
 
-        <br>
+                <div>
+                    <label for="portraitInput" class="txt-white primary-txt">Portrait</label>
+                    <input class="primary-txt" type="text" name="portrait" id="portraitInput">
+                </div>
 
-        <label for="professionInput">Profession</label>
-        <input type="text" name="profession" id="professionInput">
+                <div>
+                    <label for="bioInput" class="txt-white primary-txt">Biography</label>
+                    <input class="primary-txt" type="text" name="bio" id="bioInput">
+                </div>
 
-        <br>
-
-        <label for="countryInput">Country</label>
-        <input type="text" name="country" id="countryInput">
-
-        <br>
-
-        <label for="portraitInput">Portrait</label>
-        <input type="text" name="portrait" id="portraitInput">
-
-        <br>
-
-        <label for="bioInput">Biography</label>
-        <input type="text" name="bio" id="bioInput">
-
-        <button>Create</button>
-    </form>
+                <div>
+                    <button type="button" class="btn btn-primary primary-txt">Create</button>
+                </div>
+            </div>
+        </form>
 </body>
+
 </html>

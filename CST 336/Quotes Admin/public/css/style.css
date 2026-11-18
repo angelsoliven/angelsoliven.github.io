@@ -1,0 +1,40 @@
+.bg-eerie-black {
+    background-color: #232323;
+}
+
+.bg-night {
+    background-color: #111111;
+}
+
+.bg-jet {
+    background-color: #343434;
+}
+
+.txt-davy-gray {
+    color: #575757;
+}
+
+.txt-night {
+    color: #111111;
+}
+
+.txt-white {
+    color: white;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.header-font {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.primary-txt {
+    font-family: "Germania One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}

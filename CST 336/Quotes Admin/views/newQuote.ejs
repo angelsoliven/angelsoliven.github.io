@@ -8,48 +8,60 @@
     <title>Add Quote</title>
 </head>
 
-<body>
-    <h1>New Quote</h1>
+<body class="bg-night">
+    <header class="center-div bg-jet">
+        <h1 id="title" class="header-font txt-white">New Quote</h1>
+    </header>
+
     <%-include('partials/nav.ejs')%>
+
     <!-- Where you type in the quote -->
-    <form action="/insertQuote" method="post">
-        <!-- Checks if there is a formErrors object 
+    <form class="center-div" action="/insertQuote" method="post">
+        <div>
+            <!-- Checks if there is a formErrors object 
              and if it has an entry for the user field  -->
-        <% if (formErrors.length > 0) { %>
-            <% for (let err of formErrors) { %>
-                <span class="form-error"><%=err%></span> 
-                <br>
-            <%}%>
-        <% } %>
+            <div>
+                <% if (formErrors.length > 0) { %>
+                    <% for (let err of formErrors) { %>
+                        <p class="txt-white primary-txt"> <span class="form-error"><%=err%></span> </p>
+                    <%}%>
+                <% } %>
+            </div>
 
-        <label for="quoteInput">Quote</label>
-        <input type="text" name="quote" id="quoteInput">
+            <div>
+                <label class="txt-white primary-txt" for="quoteInput">Quote</label>
+                <input class="primary-txt" type="text" name="quote" id="quoteInput">
+            </div>
 
-        <br>
+            <div>
+                <label class="txt-white primary-txt" for="authorInput">Author</label>
 
-        <label for="authorInput">Author</label>
-        <!-- The if statement is to make sure the correct author is selected by default -->
-        <select type="text" name="authorId" id="authorInput">
-            <% for (let author of formData.authors) { %>
-                    <option value="<%= author.authorId %>"><%= author.firstName %> <%=author.lastName%></option>
-            <% } %>
-        </select>
+                <!-- The if statement is to make sure the correct author is selected by default -->
+                <select class="primary-txt" type="text" name="authorId" id="authorInput">
+                    <% for (let author of formData.authors) { %>
+                        <option class="primary-txt" value="<%= author.authorId %>"><%= author.firstName %> <%=author.lastName%></option>
+                    <% } %>
+                </select>
+            </div>
 
-        <br>
+            <div>
+                <label class="txt-white primary-txt" for="categoryInput">Categories</label>
+                <select class="primary-txt" type="text" name="category" id="categoryInput">
+                    <% for (let category of formData.categories) { %>
+                        <option class="primary-txt" value="<%=category.category%>"><%=category.category%></option>
+                    <% } %>
+                </select>
+            </div>
 
-        <label for="categoryInput">Categories</label>
-        <select type="text" name="category" id="categoryInput">
-            <% for (let category of formData.categories) { %>
-                    <option value="<%=category.category%>"><%=category.category%></option>
-            <% } %>
-        </select>
+            <div>
+                <label class="primary-txt txt-white" for="likesInput"> Likes </label>
+                <input class="primary-txt" type="number" name="likes" id="likesInput" />
+            </div>
 
-        <br>
-
-        <label for="likesInput"> Likes </label>
-        <input type="number" name="likes" id="likesInput" />
-
-        <button>Create</button>
+            <div>
+                <button type="button" class="btn btn-primary primary-txt">Create</button>
+            </div>
+        </div>
     </form>
 </body>
 
